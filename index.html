@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a logistics</title>
+    <meta
+      id="meta-description"
+      name="description"
+      content="Build a logistics marketplace connecting truck drivers and businesses directly"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-starter="content">
+    <div class="app-shell content-shell" data-testid="site-shell">
+      <header class="app-header">
+        <div class="header-brand">
+          <div class="brand-mark">B</div>
+          <span class="brand-name">Build a logistics</span>
+        </div>
+        <nav class="header-nav" data-testid="primary-nav"><a href="#home" class="nav-link">Home</a><a href="#driver-profile-creation" class="nav-link">Driver profile creation</a><a href="#load-posting-and-browsing" class="nav-link">Load posting and browsing</a><a href="#messaging-and-job-assignment" class="nav-link">Messaging and job assignment</a><a href="#library" class="nav-link">Library</a></nav>
+        <div class="header-actions">
+          <button class="btn-secondary btn-sm" type="button" data-testid="interactive-demo">Subscribe</button>
+          <a class="btn-primary btn-sm" href="#" data-testid="primary-cta">Write</a>
+        </div>
+        <button class="menu-toggle" data-testid="mobile-nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+      </header>
+
+      <main data-testid="hero-section">
+        <section class="content-hero" id="home">
+          <div class="content-hero-text">
+            <div class="hero-badge">Featured</div>
+            <h1 id="page-title" class="content-hero-title">Driver profile creation with truck details, routes, and availability</h1>
+            <p class="content-hero-desc">Intermediaries charge $50-$100 per connection</p>
+            <div class="content-hero-meta">
+              <span class="author-chip">
+                <span class="author-avatar">t</span>
+                truck drivers
+              </span>
+              <span class="meta-sep">&middot;</span>
+              <span>8 min read</span>
+            </div>
+          </div>
+          <div class="content-hero-image" style="background: linear-gradient(135deg, #0f766e22, #0f766e44)">
+            <div class="hero-image-lines">
+              <div class="img-line" style="width:70%"></div>
+              <div class="img-line" style="width:50%"></div>
+              <div class="img-line" style="width:85%"></div>
+              <div class="img-line" style="width:40%"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-categories" data-testid="feature-grid">
+          <div class="cat-tabs"><button class="cat-tab active">Driver profile creation</button><button class="cat-tab ">Load posting and browsing</button><button class="cat-tab ">Messaging and job assignment</button></div>
+        </section>
+
+        <section class="content-grid" id="articles">
+          
+      <article class="article-card">
+        <div class="article-thumb" style="background:#e8d5c4">
+          <span class="article-cat">Driver profile creation</span>
+        </div>
+        <div class="article-body">
+          <h3 class="article-title">Driver profile creation with truck details, routes, and availability</h3>
+          <p class="article-meta">3 min read · truck drivers</p>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-thumb" style="background:#c4d5e8">
+          <span class="article-cat">Load posting and browsing</span>
+        </div>
+        <div class="article-body">
+          <h3 class="article-title">View and respond to available loads</h3>
+          <p class="article-meta">5 min read · business owners</p>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-thumb" style="background:#d5e8c4">
+          <span class="article-cat">Messaging and job assignment</span>
+        </div>
+        <div class="article-body">
+          <h3 class="article-title">Express interest in jobs</h3>
+          <p class="article-meta">8 min read · truck drivers</p>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-thumb" style="background:#e8c4d5">
+          <span class="article-cat">Driver profile creation</span>
+        </div>
+        <div class="article-body">
+          <h3 class="article-title">Route and capacity-based matching</h3>
+          <p class="article-meta">4 min read · business owners</p>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-thumb" style="background:#c4e8d5">
+          <span class="article-cat">Load posting and browsing</span>
+        </div>
+        <div class="article-body">
+          <h3 class="article-title">User verification (ID, face photo, truck details)</h3>
+          <p class="article-meta">6 min read · truck drivers</p>
+        </div>
+      </article>
+      <article class="article-card">
+        <div class="article-thumb" style="background:#d5c4e8">
+          <span class="article-cat">Messaging and job assignment</span>
+        </div>
+        <div class="article-body">
+          <h3 class="article-title">Rating and review system after job completion</h3>
+          <p class="article-meta">2 min read · business owners</p>
+        </div>
+      </article>
+        </section>
+
+        
+
+        <section class="content-newsletter" id="primary-cta">
+          <div class="newsletter-inner">
+            <h2>Stay in the loop</h2>
+            <p>Get the latest from Build a logistics delivered to your inbox.</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="you@email.com" class="newsletter-input" />
+              <button class="btn-primary">Subscribe</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer" data-testid="footer-section">
+        <div class="footer-brand"><div class="brand-mark brand-mark-sm">B</div><span class="brand-name">Build a logistics</span></div>
+        <div class="footer-links"><a href="#home">Home</a><a href="#driver-profile-creation">Driver profile creation</a><a href="#load-posting-and-browsing">Load posting and browsing</a><a href="#messaging-and-job-assignment">Messaging and job assignment</a></div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
