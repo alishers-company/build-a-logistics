@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Build a logistics</title>
+    <title>FreightLink — Logistics Marketplace for Truck Drivers &amp; Businesses</title>
     <meta
       id="meta-description"
       name="description"
@@ -11,127 +11,556 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body data-starter="content">
-    <div class="app-shell content-shell" data-testid="site-shell">
+  <body>
+    <div id="site-shell" class="app-shell" data-testid="site-shell">
+
+      <!-- ── Header ── -->
       <header class="app-header">
         <div class="header-brand">
-          <div class="brand-mark">B</div>
-          <span class="brand-name">Build a logistics</span>
+          <div class="brand-mark">F</div>
+          <span class="brand-name">FreightLink</span>
         </div>
-        <nav class="header-nav" data-testid="primary-nav"><a href="#home" class="nav-link">Home</a><a href="#driver-profile-creation" class="nav-link">Driver profile creation</a><a href="#load-posting-and-browsing" class="nav-link">Load posting and browsing</a><a href="#messaging-and-job-assignment" class="nav-link">Messaging and job assignment</a><a href="#library" class="nav-link">Library</a></nav>
+
+        <nav class="header-nav" id="primary-nav" data-testid="primary-nav">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#driver-profile-creation" class="nav-link">Driver Profiles</a>
+          <a href="#load-posting-and-browsing" class="nav-link">Load Board</a>
+          <a href="#messaging-and-job-assignment" class="nav-link">Messaging</a>
+          <a href="#library" class="nav-link">Library</a>
+        </nav>
+
         <div class="header-actions">
-          <button class="btn-secondary btn-sm" type="button" data-testid="interactive-demo">Subscribe</button>
-          <a class="btn-primary btn-sm" href="#" data-testid="primary-cta">Write</a>
+          <button class="btn-secondary btn-sm" type="button" data-action="sign-in">Sign In</button>
+          <a class="btn-primary btn-sm" href="#driver-profile-creation" data-testid="primary-cta">Get Started</a>
         </div>
-        <button class="menu-toggle" data-testid="mobile-nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+
+        <button
+          class="menu-toggle"
+          data-testid="mobile-nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        ><span></span><span></span><span></span></button>
       </header>
 
-      <main data-testid="hero-section">
-        <section class="content-hero" id="home">
-          <div class="content-hero-text">
-            <div class="hero-badge">Featured</div>
-            <h1 id="page-title" class="content-hero-title">Driver profile creation with truck details, routes, and availability</h1>
-            <p class="content-hero-desc">Intermediaries charge $50-$100 per connection</p>
-            <div class="content-hero-meta">
-              <span class="author-chip">
-                <span class="author-avatar">t</span>
-                truck drivers
-              </span>
-              <span class="meta-sep">&middot;</span>
-              <span>8 min read</span>
+      <main>
+
+        <!-- ── Hero ── -->
+        <section class="hero-section" id="home" data-testid="hero-section">
+          <div class="hero-content">
+            <div class="hero-badge">No Middlemen. No Hidden Fees.</div>
+            <h1 class="hero-title">
+              Connect Truck Drivers<br>
+              with Businesses —<br>
+              <span class="hero-accent">Directly.</span>
+            </h1>
+            <p class="hero-desc">
+              FreightLink cuts out brokers and dispatch services. Drivers find loads on routes they already run. Businesses find verified capacity without the markup.
+            </p>
+            <div class="hero-cta-group">
+              <button class="btn-primary btn-large" data-action="create-profile">
+                Join as a Driver
+              </button>
+              <a href="#load-posting-and-browsing" class="btn-secondary btn-large">
+                Post a Load
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-num">2,400+</span>
+                <span class="stat-label">Verified Drivers</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">8,900+</span>
+                <span class="stat-label">Loads Delivered</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">$0</span>
+                <span class="stat-label">Broker Fees</span>
+              </div>
             </div>
           </div>
-          <div class="content-hero-image" style="background: linear-gradient(135deg, #0f766e22, #0f766e44)">
-            <div class="hero-image-lines">
-              <div class="img-line" style="width:70%"></div>
-              <div class="img-line" style="width:50%"></div>
-              <div class="img-line" style="width:85%"></div>
-              <div class="img-line" style="width:40%"></div>
-            </div>
-          </div>
-        </section>
 
-        <section class="content-categories" data-testid="feature-grid">
-          <div class="cat-tabs"><button class="cat-tab active">Driver profile creation</button><button class="cat-tab ">Load posting and browsing</button><button class="cat-tab ">Messaging and job assignment</button></div>
-        </section>
+          <div class="hero-visual">
+            <div class="hero-card-stack">
+              <div class="mock-card mock-load-card">
+                <div class="mock-card-header">
+                  <span class="mock-badge badge-load">Load Available</span>
+                  <span class="mock-price">$1,850</span>
+                </div>
+                <div class="mock-route">
+                  <div class="route-point">
+                    <span class="route-dot origin"></span>
+                    <div>
+                      <strong>Chicago, IL</strong>
+                      <small>Pickup: Mon 8 AM</small>
+                    </div>
+                  </div>
+                  <div class="route-line"></div>
+                  <div class="route-point">
+                    <span class="route-dot dest"></span>
+                    <div>
+                      <strong>Detroit, MI</strong>
+                      <small>Deliver: Mon 4 PM</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-load-details">
+                  <span class="mock-tag">Flatbed</span>
+                  <span class="mock-tag">24,000 lbs</span>
+                  <span class="mock-tag">280 mi</span>
+                </div>
+              </div>
 
-        <section class="content-grid" id="articles">
-          
-      <article class="article-card">
-        <div class="article-thumb" style="background:#e8d5c4">
-          <span class="article-cat">Driver profile creation</span>
-        </div>
-        <div class="article-body">
-          <h3 class="article-title">Driver profile creation with truck details, routes, and availability</h3>
-          <p class="article-meta">3 min read · truck drivers</p>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="article-thumb" style="background:#c4d5e8">
-          <span class="article-cat">Load posting and browsing</span>
-        </div>
-        <div class="article-body">
-          <h3 class="article-title">View and respond to available loads</h3>
-          <p class="article-meta">5 min read · business owners</p>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="article-thumb" style="background:#d5e8c4">
-          <span class="article-cat">Messaging and job assignment</span>
-        </div>
-        <div class="article-body">
-          <h3 class="article-title">Express interest in jobs</h3>
-          <p class="article-meta">8 min read · truck drivers</p>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="article-thumb" style="background:#e8c4d5">
-          <span class="article-cat">Driver profile creation</span>
-        </div>
-        <div class="article-body">
-          <h3 class="article-title">Route and capacity-based matching</h3>
-          <p class="article-meta">4 min read · business owners</p>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="article-thumb" style="background:#c4e8d5">
-          <span class="article-cat">Load posting and browsing</span>
-        </div>
-        <div class="article-body">
-          <h3 class="article-title">User verification (ID, face photo, truck details)</h3>
-          <p class="article-meta">6 min read · truck drivers</p>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="article-thumb" style="background:#d5c4e8">
-          <span class="article-cat">Messaging and job assignment</span>
-        </div>
-        <div class="article-body">
-          <h3 class="article-title">Rating and review system after job completion</h3>
-          <p class="article-meta">2 min read · business owners</p>
-        </div>
-      </article>
-        </section>
-
-        
-
-        <section class="content-newsletter" id="primary-cta">
-          <div class="newsletter-inner">
-            <h2>Stay in the loop</h2>
-            <p>Get the latest from Build a logistics delivered to your inbox.</p>
-            <div class="newsletter-form">
-              <input type="email" placeholder="you@email.com" class="newsletter-input" />
-              <button class="btn-primary">Subscribe</button>
+              <div class="mock-card mock-driver-card">
+                <div class="driver-avatar-row">
+                  <div class="driver-avatar">M</div>
+                  <div class="driver-info">
+                    <strong>Marcus T.</strong>
+                    <div class="driver-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.9</span></div>
+                  </div>
+                  <span class="mock-badge badge-verified">Verified</span>
+                </div>
+                <div class="driver-truck-info">
+                  <span class="mock-tag">Flatbed &middot; 48ft</span>
+                  <span class="mock-tag">40,000 lb cap.</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
+        <!-- ── Feature Grid ── -->
+        <section class="features-section" data-testid="feature-grid">
+          <div class="section-header-center">
+            <p class="section-label">Why FreightLink</p>
+            <h2 class="section-title-lg">Everything logistics, nothing extra</h2>
+          </div>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon-wrap">&#128665;</div>
+              <h3>Driver Profiles</h3>
+              <p>Build a complete profile with truck specs, preferred routes, availability calendar, and verified credentials.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-wrap">&#128230;</div>
+              <h3>Live Load Board</h3>
+              <p>Browse loads filtered by route, weight, trailer type, and date. New loads posted every hour.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-wrap">&#128172;</div>
+              <h3>Direct Messaging</h3>
+              <p>Negotiate rates and confirm details in-app. No phone tag, no broker in the middle.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-wrap">&#128269;</div>
+              <h3>Smart Matching</h3>
+              <p>Our engine surfaces the right drivers for each load based on route, capacity, and real-time availability.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-wrap">&#128737;</div>
+              <h3>ID &amp; Truck Verification</h3>
+              <p>Every driver and business is verified with government ID, face photo, and truck documentation before going live.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-wrap">&#11088;</div>
+              <h3>Ratings &amp; Reviews</h3>
+              <p>After every job, both parties leave reviews that build a permanent, compounding reputation.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Driver Profile Creation ── -->
+        <section class="content-section" id="driver-profile-creation">
+          <div class="section-split">
+            <div class="section-text">
+              <p class="section-label">For Drivers</p>
+              <h2 class="section-title">Your profile is your business card</h2>
+              <p class="section-body">
+                Set up your driver profile in minutes. Add your truck specs, the routes you run regularly, and your availability. Businesses search for drivers by exactly these criteria — the more complete your profile, the more loads you'll see.
+              </p>
+              <ul class="feature-list">
+                <li><span class="check">&#10003;</span> Truck type, make, model, and weight capacity</li>
+                <li><span class="check">&#10003;</span> Preferred corridors and service regions</li>
+                <li><span class="check">&#10003;</span> Weekly availability calendar</li>
+                <li><span class="check">&#10003;</span> CDL class, endorsements, and years of experience</li>
+                <li><span class="check">&#10003;</span> Insurance certificates and MC number</li>
+              </ul>
+              <button class="btn-primary" data-testid="interactive-demo" data-action="create-profile">
+                Create Your Driver Profile
+              </button>
+            </div>
+
+            <div class="section-visual">
+              <div class="profile-form-mock">
+                <div class="mock-form-header">
+                  <div class="driver-avatar large">M</div>
+                  <div>
+                    <strong>Marcus Thompson</strong>
+                    <div class="driver-rating">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 &middot; 143 trips</div>
+                  </div>
+                </div>
+                <div class="mock-form-fields">
+                  <div class="mock-field">
+                    <label>Truck Type</label>
+                    <div class="mock-input selected">Flatbed &middot; 48ft</div>
+                  </div>
+                  <div class="mock-field">
+                    <label>Max Capacity</label>
+                    <div class="mock-input">40,000 lbs</div>
+                  </div>
+                  <div class="mock-field">
+                    <label>Preferred Routes</label>
+                    <div class="mock-tags-row">
+                      <span class="mock-tag active">Midwest</span>
+                      <span class="mock-tag active">Southeast</span>
+                      <span class="mock-tag">Northeast</span>
+                    </div>
+                  </div>
+                  <div class="mock-field">
+                    <label>Availability</label>
+                    <div class="avail-grid">
+                      <span class="avail-day active">M</span>
+                      <span class="avail-day active">T</span>
+                      <span class="avail-day active">W</span>
+                      <span class="avail-day active">T</span>
+                      <span class="avail-day">F</span>
+                      <span class="avail-day">S</span>
+                      <span class="avail-day">S</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Load Posting & Browsing ── -->
+        <section class="content-section alt-bg" id="load-posting-and-browsing">
+          <div class="section-split reverse">
+            <div class="section-visual">
+              <div class="load-board-mock">
+                <div class="load-board-header">
+                  <span class="mock-badge badge-load">Live Load Board</span>
+                  <span class="load-count">47 loads near you</span>
+                </div>
+                <div class="load-list">
+                  <div class="load-item active-item">
+                    <div class="load-item-route">
+                      <strong>Chicago &#8594; Detroit</strong>
+                      <span class="load-price">$1,850</span>
+                    </div>
+                    <div class="load-item-meta">Flatbed &middot; 24,000 lbs &middot; 280 mi &middot; Mon 8 AM</div>
+                    <button class="btn-xs btn-primary" data-action="express-interest">Express Interest</button>
+                  </div>
+                  <div class="load-item">
+                    <div class="load-item-route">
+                      <strong>Indianapolis &#8594; Columbus</strong>
+                      <span class="load-price">$1,240</span>
+                    </div>
+                    <div class="load-item-meta">Dry Van &middot; 18,500 lbs &middot; 175 mi &middot; Tue 6 AM</div>
+                    <button class="btn-xs btn-outline" data-action="view-load">View Details</button>
+                  </div>
+                  <div class="load-item">
+                    <div class="load-item-route">
+                      <strong>Milwaukee &#8594; St. Louis</strong>
+                      <span class="load-price">$2,100</span>
+                    </div>
+                    <div class="load-item-meta">Reefer &middot; 22,000 lbs &middot; 315 mi &middot; Wed 7 AM</div>
+                    <button class="btn-xs btn-outline" data-action="view-load">View Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-text">
+              <p class="section-label">Load Board</p>
+              <h2 class="section-title">Post loads. Find capacity. Done.</h2>
+              <p class="section-body">
+                Businesses post loads in under two minutes. Drivers browse a real-time board filtered by their route and truck type. No call centers, no waiting on hold — just direct connections that move freight.
+              </p>
+              <ul class="feature-list">
+                <li><span class="check">&#10003;</span> Post a load with pickup, delivery, weight, and rate</li>
+                <li><span class="check">&#10003;</span> Filter loads by trailer type, region, and date</li>
+                <li><span class="check">&#10003;</span> Drivers express interest with one tap</li>
+                <li><span class="check">&#10003;</span> Businesses review driver profiles before assigning</li>
+              </ul>
+              <a href="#primary-cta" class="btn-primary">Post Your First Load</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Messaging & Job Assignment ── -->
+        <section class="content-section" id="messaging-and-job-assignment">
+          <div class="section-split">
+            <div class="section-text">
+              <p class="section-label">Communication</p>
+              <h2 class="section-title">Negotiate, confirm, and assign — in the app</h2>
+              <p class="section-body">
+                Once a driver expresses interest, both parties can message directly. Discuss rate adjustments, confirm load details, and assign the job — all inside FreightLink. No phone numbers exchanged until you're both ready.
+              </p>
+              <ul class="feature-list">
+                <li><span class="check">&#10003;</span> In-app messaging with read receipts</li>
+                <li><span class="check">&#10003;</span> One-tap rate counter-offer</li>
+                <li><span class="check">&#10003;</span> Job confirmation and digital BOL</li>
+                <li><span class="check">&#10003;</span> Push notifications for new messages</li>
+              </ul>
+            </div>
+
+            <div class="section-visual">
+              <div class="chat-mock">
+                <div class="chat-header">
+                  <div class="driver-avatar sm">R</div>
+                  <div class="chat-header-info">
+                    <strong>Rivera Freight Co.</strong>
+                    <div class="online-status"><span class="online-dot"></span> Online now</div>
+                  </div>
+                </div>
+                <div class="chat-messages">
+                  <div class="chat-msg them">Hi Marcus, interested in the Chicago &#8594; Detroit load for Monday?</div>
+                  <div class="chat-msg me">Yes, available Monday morning. Can you do $1,950?</div>
+                  <div class="chat-msg them">Let's meet at $1,900. We'll send the BOL tonight.</div>
+                  <div class="chat-msg me assign">
+                    <span class="assign-icon">&#10003;</span> Job Assigned &mdash; Mon, 8:00 AM
+                  </div>
+                </div>
+                <div class="chat-input-row">
+                  <input type="text" class="chat-input" placeholder="Type a message…" readonly>
+                  <button class="btn-xs btn-primary" data-action="send-message">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Matching / Verification / Rating ── -->
+        <section class="three-col-section">
+          <div class="three-col-grid">
+            <div class="three-col-card" id="route-matching">
+              <div class="feature-icon-lg">&#128506;</div>
+              <h3>Route &amp; Capacity Matching</h3>
+              <p>Our matching engine finds drivers whose preferred corridors overlap with your load's route, and whose trucks can handle the weight and trailer type. No sifting through irrelevant results.</p>
+              <a href="#load-posting-and-browsing" class="btn-link">Browse loads &#8594;</a>
+            </div>
+            <div class="three-col-card" id="user-verification">
+              <div class="feature-icon-lg">&#128274;</div>
+              <h3>User Verification</h3>
+              <p>Every account is verified before going live. Drivers upload a government ID, a selfie for face-match, CDL documentation, and truck photos. Businesses verify their DOT number and business registration.</p>
+              <a href="#driver-profile-creation" class="btn-link">Get verified &#8594;</a>
+            </div>
+            <div class="three-col-card" id="rating-review">
+              <div class="feature-icon-lg">&#11088;</div>
+              <h3>Rating &amp; Review System</h3>
+              <p>After every completed job, both driver and business leave a review. These are permanent and public — building a reputation that compounds with every load you deliver.</p>
+              <a href="#driver-profile-creation" class="btn-link">See how it works &#8594;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Who It's For ── -->
+        <section class="who-section" id="who-its-for">
+          <div class="section-header-center">
+            <p class="section-label">Who It&apos;s For</p>
+            <h2 class="section-title-lg">Built for the people who move America</h2>
+          </div>
+          <div class="who-grid">
+            <div class="who-card who-driver">
+              <div class="who-icon">&#128665;</div>
+              <h3>Independent Truck Drivers</h3>
+              <p>Owner-operators and small fleets who are tired of paying brokers 15–30% of every load. Find steady freight on routes you already run and build direct relationships with shippers.</p>
+              <ul class="who-list">
+                <li>Keep more of every load</li>
+                <li>Build repeat shipper relationships</li>
+                <li>Control your own schedule</li>
+                <li>No dispatch fees, ever</li>
+              </ul>
+              <button class="btn-primary" data-action="create-profile">Start as a Driver</button>
+            </div>
+            <div class="who-card who-business">
+              <div class="who-icon">&#127981;</div>
+              <h3>Shippers &amp; Businesses</h3>
+              <p>Manufacturers, distributors, and logistics managers who need reliable capacity without broker markups. Post loads in minutes and choose from verified drivers with real reviews.</p>
+              <ul class="who-list">
+                <li>Post loads in under 2 minutes</li>
+                <li>Access verified driver network</li>
+                <li>Transparent pricing, no surprises</li>
+                <li>Digital BOLs and invoicing</li>
+              </ul>
+              <a href="#load-posting-and-browsing" class="btn-primary">Post Your First Load</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Library ── -->
+        <section class="library-section" id="library">
+          <div class="section-header-center">
+            <p class="section-label">Library</p>
+            <h2 class="section-title-lg">Resources for drivers and shippers</h2>
+          </div>
+          <div class="cat-tabs" data-tab-group="library">
+            <button class="cat-tab active" data-filter="all">All</button>
+            <button class="cat-tab" data-filter="drivers">For Drivers</button>
+            <button class="cat-tab" data-filter="shippers">For Shippers</button>
+            <button class="cat-tab" data-filter="compliance">Compliance</button>
+          </div>
+          <div class="article-grid" id="article-grid"></div>
+        </section>
+
+        <!-- ── CTA Section ── -->
+        <section class="cta-section" id="primary-cta" data-testid="primary-cta">
+          <div class="cta-inner">
+            <h2>Stop paying middlemen for connections you can make yourself</h2>
+            <p>Join 2,400+ drivers and 800+ businesses already using FreightLink. Free to join, free to post, free to match.</p>
+            <div class="cta-buttons">
+              <button class="btn-primary btn-large" data-action="create-profile">Get Started Free</button>
+              <a href="#load-posting-and-browsing" class="btn-secondary btn-large">See the Load Board</a>
+            </div>
+          </div>
+        </section>
+
       </main>
 
+      <!-- ── Footer ── -->
       <footer class="app-footer" data-testid="footer-section">
-        <div class="footer-brand"><div class="brand-mark brand-mark-sm">B</div><span class="brand-name">Build a logistics</span></div>
-        <div class="footer-links"><a href="#home">Home</a><a href="#driver-profile-creation">Driver profile creation</a><a href="#load-posting-and-browsing">Load posting and browsing</a><a href="#messaging-and-job-assignment">Messaging and job assignment</a></div>
+        <div class="footer-inner">
+          <div class="footer-brand-block">
+            <div class="footer-brand">
+              <div class="brand-mark brand-mark-sm">F</div>
+              <span class="brand-name">FreightLink</span>
+            </div>
+            <p class="footer-tagline">Connecting truck drivers and businesses directly.</p>
+          </div>
+          <div class="footer-cols">
+            <div class="footer-col">
+              <strong>Platform</strong>
+              <a href="#home">Home</a>
+              <a href="#load-posting-and-browsing">Load Board</a>
+              <a href="#driver-profile-creation">Driver Profiles</a>
+              <a href="#messaging-and-job-assignment">Messaging</a>
+            </div>
+            <div class="footer-col">
+              <strong>Features</strong>
+              <a href="#route-matching">Route Matching</a>
+              <a href="#user-verification">Verification</a>
+              <a href="#rating-review">Reviews</a>
+              <a href="#library">Library</a>
+            </div>
+            <div class="footer-col">
+              <strong>Get Started</strong>
+              <a href="#who-its-for">For Drivers</a>
+              <a href="#who-its-for">For Shippers</a>
+              <a href="#primary-cta">Sign Up Free</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 FreightLink. All rights reserved.</span>
+          <div class="footer-links">
+            <a href="#home">Privacy</a>
+            <a href="#home">Terms</a>
+            <a href="#home">Contact</a>
+          </div>
+        </div>
       </footer>
+
+    </div><!-- /#site-shell -->
+
+    <!-- ── Driver Profile Creation Modal ── -->
+    <div class="modal-overlay" id="profile-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modal-title">Create Your Driver Profile</h2>
+          <button class="modal-close" data-action="close-modal" aria-label="Close dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-steps">
+            <div class="step active" data-step="1">
+              <span class="step-num">1</span><span>Truck Details</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step" data-step="2">
+              <span class="step-num">2</span><span>Routes</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step" data-step="3">
+              <span class="step-num">3</span><span>Availability</span>
+            </div>
+          </div>
+
+          <!-- Step 1: Truck Details -->
+          <div class="modal-step-content" id="step-1-content">
+            <div class="form-group">
+              <label class="form-label">Truck Type</label>
+              <div class="radio-grid">
+                <label class="radio-card selected">
+                  <input type="radio" name="truck-type" value="flatbed" checked> Flatbed
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="truck-type" value="dryvan"> Dry Van
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="truck-type" value="reefer"> Reefer
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="truck-type" value="stepDeck"> Step Deck
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="capacity">Max Capacity (lbs)</label>
+              <input type="number" id="capacity" class="form-input" placeholder="e.g. 40000" min="1000" max="80000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="trailer-length">Trailer Length (ft)</label>
+              <input type="number" id="trailer-length" class="form-input" placeholder="e.g. 48" min="20" max="53">
+            </div>
+          </div>
+
+          <!-- Step 2: Routes -->
+          <div class="modal-step-content hidden" id="step-2-content">
+            <div class="form-group">
+              <label class="form-label">Preferred Regions</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-card"><input type="checkbox" value="midwest"> Midwest</label>
+                <label class="checkbox-card"><input type="checkbox" value="southeast"> Southeast</label>
+                <label class="checkbox-card"><input type="checkbox" value="northeast"> Northeast</label>
+                <label class="checkbox-card"><input type="checkbox" value="southwest"> Southwest</label>
+                <label class="checkbox-card"><input type="checkbox" value="west"> West Coast</label>
+                <label class="checkbox-card"><input type="checkbox" value="mountain"> Mountain</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Availability -->
+          <div class="modal-step-content hidden" id="step-3-content">
+            <div class="form-group">
+              <label class="form-label">Available Days</label>
+              <div class="day-picker">
+                <label class="day-btn"><input type="checkbox" value="mon"> Mon</label>
+                <label class="day-btn"><input type="checkbox" value="tue"> Tue</label>
+                <label class="day-btn"><input type="checkbox" value="wed"> Wed</label>
+                <label class="day-btn"><input type="checkbox" value="thu"> Thu</label>
+                <label class="day-btn"><input type="checkbox" value="fri"> Fri</label>
+                <label class="day-btn"><input type="checkbox" value="sat"> Sat</label>
+                <label class="day-btn"><input type="checkbox" value="sun"> Sun</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pickup-time">Earliest Pickup Time</label>
+              <input type="time" id="pickup-time" class="form-input" value="06:00">
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn-secondary" id="modal-back" style="display:none">&#8592; Back</button>
+            <button class="btn-primary" id="modal-next">Next Step &#8594;</button>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
