@@ -1,10 +1,92 @@
 [
   {
-    "title": "Build a logistics launch brief",
-    "category": "Strategy"
+    "id": "1",
+    "title": "How to Write a Driver Profile That Gets You More Loads",
+    "category": "drivers",
+    "tags": ["profile", "tips"],
+    "readTime": "5 min read",
+    "audience": "truck drivers",
+    "excerpt": "A complete profile with truck specs, regions, and availability gets 3x more load matches than an incomplete one.",
+    "thumb": "#e8d5c4"
   },
   {
-    "title": "Three launch lessons",
-    "category": "Execution"
+    "id": "2",
+    "title": "Posting Your First Load: A Step-by-Step Guide for Shippers",
+    "category": "shippers",
+    "tags": ["getting started", "loads"],
+    "readTime": "4 min read",
+    "audience": "business owners",
+    "excerpt": "From creating an account to watching bids come in — here's exactly how to post your first load on FreightLink.",
+    "thumb": "#c4d5e8"
+  },
+  {
+    "id": "3",
+    "title": "Understanding Freight Rates: What Drivers and Shippers Need to Know",
+    "category": "shippers",
+    "tags": ["rates", "pricing"],
+    "readTime": "6 min read",
+    "audience": "business owners",
+    "excerpt": "Market rates fluctuate based on lane demand, fuel costs, and seasonal patterns. Here's how to price fairly and stay competitive.",
+    "thumb": "#d5e8c4"
+  },
+  {
+    "id": "4",
+    "title": "Getting Verified: What Documents You Need as a Truck Driver",
+    "category": "compliance",
+    "tags": ["verification", "documents"],
+    "readTime": "3 min read",
+    "audience": "truck drivers",
+    "excerpt": "Verification unlocks full access to the load board. Here's what to prepare before you apply.",
+    "thumb": "#e8c4d5"
+  },
+  {
+    "id": "5",
+    "title": "How Route-Based Matching Works",
+    "category": "drivers",
+    "tags": ["matching", "routes"],
+    "readTime": "4 min read",
+    "audience": "truck drivers",
+    "excerpt": "FreightLink matches you with loads on corridors you already run, so you're never deadheading more than necessary.",
+    "thumb": "#c4e8d5"
+  },
+  {
+    "id": "6",
+    "title": "Building Your 5-Star Reputation on FreightLink",
+    "category": "drivers",
+    "tags": ["reviews", "reputation"],
+    "readTime": "5 min read",
+    "audience": "truck drivers",
+    "excerpt": "Drivers with 4.8+ ratings earn 40% more loads per month. Here's what the top-rated drivers do differently.",
+    "thumb": "#d5c4e8"
+  },
+  {
+    "id": "7",
+    "title": "HOS Rules Every Owner-Operator Should Know in 2026",
+    "category": "compliance",
+    "tags": ["HOS", "regulations"],
+    "readTime": "7 min read",
+    "audience": "truck drivers",
+    "excerpt": "Hours of Service regulations changed again. Here's a plain-English breakdown of the rules that affect your daily operation.",
+    "thumb": "#e8e4c4"
+  },
+  {
+    "id": "8",
+    "title": "How to Reduce Freight Costs Without Sacrificing Reliability",
+    "category": "shippers",
+    "tags": ["cost", "strategy"],
+    "readTime": "6 min read",
+    "audience": "business owners",
+    "excerpt": "Direct carrier relationships, flexible dates, and load consolidation can cut shipping costs by 20–30%.",
+    "thumb": "#c4c8e8"
+  },
+  {
+    "id": "9",
+    "title": "What to Include in a BOL (Bill of Lading)",
+    "category": "compliance",
+    "tags": ["BOL", "documents"],
+    "readTime": "4 min read",
+    "audience": "business owners",
+    "excerpt": "A complete and accurate BOL protects both parties. Here's every field you need to fill out — and why it matters.",
+    "thumb": "#e4e8c4"
   }
 ]
